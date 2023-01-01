@@ -44,5 +44,11 @@ public class Course {
 	public void setCfees(String cfees) {
 		this.cfees = cfees;
 	}
+
+	@Override
+	public String toString() {
+		return "Course [cid=" + cid + ", cname=" + cname + ", cfees=" + cfees + "]";
+	}
+	
 	
 }
