@@ -5,6 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 
+import com.infogalaxy.hibernatedemo.entity.Course;
+import com.infogalaxy.hibernatedemo.utils.HibernateUtils;
+
 /**
  * Hello world!
  *
@@ -15,12 +18,7 @@ public class CreateApp
     {
         System.out.println( "Hello World!" );
         
-        Configuration configuration = new Configuration();
-        configuration.configure("hibernate.cfg.xml");
-        configuration.addAnnotatedClass(Course.class);
-        
-        
-        SessionFactory sessionFactory = configuration.buildSessionFactory();
+        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
         
         Session session = sessionFactory.openSession();
         
@@ -37,4 +35,6 @@ public class CreateApp
         System.out.println("Data Saved...");
         
     }
+
+	
 }

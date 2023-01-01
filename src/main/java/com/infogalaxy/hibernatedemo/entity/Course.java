@@ -1,4 +1,4 @@
-package com.infogalaxy.hibernatedemo;
+package com.infogalaxy.hibernatedemo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
